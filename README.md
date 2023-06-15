@@ -18,7 +18,7 @@ Olá, esse é o repositório do trabalho final da Disciplina de Algoritmos Gené
 No âmbito da disciplina de Termodinâmica Avançada, ministrada pelo professor Amauri Jardim de Paula, foi realizado ao longo do semestre, concomitantemente à essa disciplina, um projeto. Esse projeto está ilustrado na imagem abaixo:
 
 <p align="center">
-  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/ProjetoTermodinamica.png" width="80" height="80">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/ProjetoTermodinamica.png" width="300" height="300">
 </p>
 
 Nele, tivemos a missão de escolher uma mistura binária, formada então por dois compostos, para passar pelas etapas ilustradas, das quais destacamos dois processos, a separação de mistura (destilação fracionada na maioria dos casos) e o ciclo de rankine. Nesse sentido, usaremos esses dois processos para orientar a buscar pela melhor mistura binária.
@@ -104,9 +104,19 @@ Com isso, foi possível obter diversos resultados baseados no desenvolvimento do
 
 Assim, o Método de Avaliação é uma abordagem que fizemos para com o fitness na função objetivo, onde invés de tentar maximizar ou minimizar diretamente as grandezas de interesse, nós as utilizamos como critério em uma avaliação. Dessa maneira, o fitness é a soma da avaliações, as quais são a combinação linear das notas obtidas pelos compostos, as quais são o produto de um peso por um critério. Por exemplo, podemos calcular o fitness de um combustível da seguinte maneira:
 
-$$fitness_etanol = 10 \cdot \Delta H_c - 3 \cdot MM$$
+$$fitness = 10 \cdot \Delta H_c - 3 \cdot MM$$
 
-Onde as constantes são os pesos atribuidos baseados no objetivo e as grandezas sao a entalpia de combustão e a massa molar, respectivamente.
+Onde as constantes são os pesos atribuidos baseados no objetivo e as grandezas são a entalpia de combustão e a massa molar, respectivamente.
+
+## Resultados e Discussão
+
+Como dito anteriormente, ao longo do desenvolvimento desse trabalho, outras abordagens foram utilizadas, não com objetivo em si, mas como parte do objetivo final. Assim, mencionaremos os resultados obtidos antes e como eles ajudaram na criação do notebook final.
+
+### Escolhendo um bom combustível
+
+A primeira versão do nosso algoritmo nos entregava uma sequência de combustíveis, onde o primeiro melhor combustível era selecionado e depois substituido caso outra geração possuise um melhor. Essa abordagem foi mantida ao longo do desenvolvimento e melhorada com a atribuição desse hall da fama à uma lista mais tarde. Além disso, é importante ressaltar que o indíviduo era apenas um combustível, portanto, igual ao gene e não fora usado o cruzamento por não haver o que cruzar, apenas seleção e mutação. Com isso, foram obtidos os seguintes resultados:
+
+
 
 ---
 
