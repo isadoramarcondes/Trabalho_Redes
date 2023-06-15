@@ -18,7 +18,7 @@ Olá, esse é o repositório do trabalho final da Disciplina de Algoritmos Gené
 No âmbito da disciplina de Termodinâmica Avançada, ministrada pelo professor Amauri Jardim de Paula, foi realizado ao longo do semestre, concomitantemente à essa disciplina, um projeto. Esse projeto está ilustrado na imagem abaixo:
 
 <p align="center">
-  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/tree/main/Figuras%20Readme" alt="Projeto de Termodinâmica" width="80" height="80">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/tree/main/Figuras%20Readme" width="80" height="80">
 </p>
 
 Nele, tivemos a missão de escolher uma mistura binária, formada então por dois compostos, para passar pelas etapas ilustradas, das quais destacamos dois processos, a separação de mistura (destilação fracionada na maioria dos casos) e o ciclo de rankine. Nesse sentido, usaremos esses dois processos para orientar a buscar pela melhor mistura binária.
@@ -65,7 +65,7 @@ Nesse contexto, utilizamos de início os dados presentes na tabela qm9, os quais
 
 Ademais, usamos os dados convertidos para estimar a entalpia de combustão de cada molécula presente no dataset, mas antes de entrarmos nessa parte, vale ressaltar os possíveis erros de aproximação obtidos pela conversão citada. Desse modo, a conversão pode gerar discrepâncias dada a natureza das medições, já que a entalpia de atomização faz referência a energia necessária para separar uma molécula em núcleos e elétrons e a entalpia de formação para separar em elementos. Segue um exemplo da discrepância dos valores para o etanol:
 
-$$C_2H_6O \xrightarrow{} \Delta H_{atomization} = -97243.5744747 \text{kcal/mol} \\ C_2H_6O \xrightarrow{} \Delta H_{formation} = -66.39579 \text{kcal/mol}$$
+$$C_2H_6O \xrightarrow{} \Delta H_{atomization} = -97243.5744747 \text{ kcal/mol} \quad C_2H_6O \xrightarrow{} \Delta H_{formation} = -66.39579 \text{ kcal/mol}$$
 
 Assim, mesmo utilizando as referências para a correção, esse tipo de diferença pode gerar imprecisão, como no caso do etanol, cujo valor obtido foi:
 
@@ -80,8 +80,20 @@ Após isso, é realizada a reação de combustão e a estimativa da entalpia de 
 
 ### Algoritmo Genético
 
-aa
+O algoritmo genético presente no arquivo 'alg_gen.ipynb' foi usado para encontrar a melhor mistura binária no contexto do nosso problema e como outros algoritmos genéticos, é dividido em algumas partes, as quais estão detalhadas a seguir:
 
+1. Importações: na primeira parte do notebook, trazemos todas bibliotecas utilizadas e os dados obtidos na seção anterior, dos quais são selecionadas algumas informações de interesse e então é feita uma normalização dos dados usados como critério mais tarde.
+2. Funções: nessa segunda parte, são montadas as engrenagens do algoritmo, sendo elas:
+    - Gene; um combustível aleatório da tabela.
+    - Indivíduos; uma mistura binária, ou seja, uma lista de dois combustíveis.
+    - População; um posto, ou seja, um conjunto de indivíduos/combustíveis diferentes do qual queremos o melhor.
+    - Funçao Objetivo; calcula o fitness baseado no Método de Avaliação por pesos/critérios.
+    - Seleção; usa o Método da Roleta para maximizar o fitness.
+    - Cruzamento; usa o cruzamento simples para trocar combustíveis de indivíduo.
+    - Mutação; troca um combustível por outro aleatório.
+3. Funções Locais e Constantes: nessa terceira parte são definidas as funções locais necessárias para pouco mudar o algoritmo genético e os parâmetros constantes a serem utilizados no algoritmo.
+4. Algoritmo Genéticos: o algoritmo genético clássico produzido ao longo do semestre em sala de aula com a ajuda do professor Daniel Cassar e de outros colegas de classe de maneira didática com a mudança no hall da fama para analisar melhor os resultado na última parte.
+5. Análise de Resultado: na última parte do notebook, buscamos visualizar os membros do hall da fama e verificar se os valores obtidos são válidos para a solução do problema.
 
 ---
 
