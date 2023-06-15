@@ -18,7 +18,7 @@ Olá, esse é o repositório do trabalho final da Disciplina de Algoritmos Gené
 No âmbito da disciplina de Termodinâmica Avançada, ministrada pelo professor Amauri Jardim de Paula, foi realizado ao longo do semestre, concomitantemente à essa disciplina, um projeto. Esse projeto está ilustrado na imagem abaixo:
 
 <p align="center">
-  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/tree/main/Figuras%20Readme" width="80" height="80">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/ProjetoTermodinamica.png" width="80" height="80">
 </p>
 
 Nele, tivemos a missão de escolher uma mistura binária, formada então por dois compostos, para passar pelas etapas ilustradas, das quais destacamos dois processos, a separação de mistura (destilação fracionada na maioria dos casos) e o ciclo de rankine. Nesse sentido, usaremos esses dois processos para orientar a buscar pela melhor mistura binária.
@@ -83,7 +83,9 @@ Após isso, é realizada a reação de combustão e a estimativa da entalpia de 
 O algoritmo genético presente no arquivo 'alg_gen.ipynb' foi usado para encontrar a melhor mistura binária no contexto do nosso problema e como outros algoritmos genéticos, é dividido em algumas partes, as quais estão detalhadas a seguir:
 
 1. Importações: na primeira parte do notebook, trazemos todas bibliotecas utilizadas e os dados obtidos na seção anterior, dos quais são selecionadas algumas informações de interesse e então é feita uma normalização dos dados usados como critério mais tarde.
+
 2. Funções: nessa segunda parte, são montadas as engrenagens do algoritmo, sendo elas:
+
     - Gene; um combustível aleatório da tabela.
     - Indivíduos; uma mistura binária, ou seja, uma lista de dois combustíveis.
     - População; um posto, ou seja, um conjunto de indivíduos/combustíveis diferentes do qual queremos o melhor.
@@ -91,9 +93,20 @@ O algoritmo genético presente no arquivo 'alg_gen.ipynb' foi usado para encontr
     - Seleção; usa o Método da Roleta para maximizar o fitness.
     - Cruzamento; usa o cruzamento simples para trocar combustíveis de indivíduo.
     - Mutação; troca um combustível por outro aleatório.
+
 3. Funções Locais e Constantes: nessa terceira parte são definidas as funções locais necessárias para pouco mudar o algoritmo genético e os parâmetros constantes a serem utilizados no algoritmo.
+
 4. Algoritmo Genéticos: o algoritmo genético clássico produzido ao longo do semestre em sala de aula com a ajuda do professor Daniel Cassar e de outros colegas de classe de maneira didática com a mudança no hall da fama para analisar melhor os resultado na última parte.
+
 5. Análise de Resultado: na última parte do notebook, buscamos visualizar os membros do hall da fama e verificar se os valores obtidos são válidos para a solução do problema.
+
+Com isso, foi possível obter diversos resultados baseados no desenvolvimento do algoritmo, o qual chegou a esse estado após uma progressão que será melhor detalhada na seção de resultados. No mais, vale salientar o que seria o Método de Avaliação.
+
+Assim, o Método de Avaliação é uma abordagem que fizemos para com o fitness na função objetivo, onde invés de tentar maximizar ou minimizar diretamente as grandezas de interesse, nós as utilizamos como critério em uma avaliação. Dessa maneira, o fitness é a soma da avaliações, as quais são a combinação linear das notas obtidas pelos compostos, as quais são o produto de um peso por um critério. Por exemplo, podemos calcular o fitness de um combustível da seguinte maneira:
+
+$$fitness_etanol = 10 \cdot \Delta H_c - 3 \cdot MM$$
+
+Onde as constantes são os pesos atribuidos baseados no objetivo e as grandezas sao a entalpia de combustão e a massa molar, respectivamente.
 
 ---
 
