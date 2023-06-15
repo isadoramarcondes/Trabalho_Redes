@@ -18,7 +18,7 @@ Olá, esse é o repositório do trabalho final da Disciplina de Algoritmos Gené
 No âmbito da disciplina de Termodinâmica Avançada, ministrada pelo professor Amauri Jardim de Paula, foi realizado ao longo do semestre, concomitantemente à essa disciplina, um projeto. Esse projeto está ilustrado na imagem abaixo:
 
 <p align="center">
-  <img src="C:\JupyterLab\RedesNeurais&AlgoritmosGeneticos\Trabalho Final\Trabalho_Redes\Figuras Readme\ProjetoTermodinamica.png" alt="Projeto de Termodinâmica" width="80" height="80">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/tree/main/Figuras%20Readme" alt="Projeto de Termodinâmica" width="80" height="80">
 </p>
 
 Nele, tivemos a missão de escolher uma mistura binária, formada então por dois compostos, para passar pelas etapas ilustradas, das quais destacamos dois processos, a separação de mistura (destilação fracionada na maioria dos casos) e o ciclo de rankine. Nesse sentido, usaremos esses dois processos para orientar a buscar pela melhor mistura binária.
@@ -65,8 +65,7 @@ Nesse contexto, utilizamos de início os dados presentes na tabela qm9, os quais
 
 Ademais, usamos os dados convertidos para estimar a entalpia de combustão de cada molécula presente no dataset, mas antes de entrarmos nessa parte, vale ressaltar os possíveis erros de aproximação obtidos pela conversão citada. Desse modo, a conversão pode gerar discrepâncias dada a natureza das medições, já que a entalpia de atomização faz referência a energia necessária para separar uma molécula em núcleos e elétrons e a entalpia de formação para separar em elementos. Segue um exemplo da discrepância dos valores para o etanol:
 
-$$C_2H_6O \xrightarrow{} \Delta H_{atomization} = -97243.5744747 \text{kcal/mol}$$
-$$C_2H_6O \xrightarrow{} \Delta H_{formation} = -66.39579 \text{kcal/mol}$$
+$$C_2H_6O \xrightarrow{} \Delta H_{atomization} = -97243.5744747 \text{kcal/mol} \\ C_2H_6O \xrightarrow{} \Delta H_{formation} = -66.39579 \text{kcal/mol}$$
 
 Assim, mesmo utilizando as referências para a correção, esse tipo de diferença pode gerar imprecisão, como no caso do etanol, cujo valor obtido foi:
 
