@@ -18,7 +18,7 @@ Olá, esse é o repositório do trabalho final da Disciplina de Algoritmos Gené
 No âmbito da disciplina de Termodinâmica Avançada, ministrada pelo professor Amauri Jardim de Paula, foi realizado ao longo do semestre, concomitantemente à essa disciplina, um projeto. Esse projeto está ilustrado na imagem abaixo:
 
 <p align="center">
-  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/ProjetoTermodinamica.png" width="300" height="300">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/ProjetoTermodinamica.png">
 </p>
 
 Nele, tivemos a missão de escolher uma mistura binária, formada então por dois compostos, para passar pelas etapas ilustradas, das quais destacamos dois processos, a separação de mistura (destilação fracionada na maioria dos casos) e o ciclo de rankine. Nesse sentido, usaremos esses dois processos para orientar a buscar pela melhor mistura binária.
@@ -116,7 +116,19 @@ Como dito anteriormente, ao longo do desenvolvimento desse trabalho, outras abor
 
 A primeira versão do nosso algoritmo nos entregava uma sequência de combustíveis, onde o primeiro melhor combustível era selecionado e depois substituido caso outra geração possuise um melhor. Essa abordagem foi mantida ao longo do desenvolvimento e melhorada com a atribuição desse hall da fama à uma lista mais tarde. Além disso, é importante ressaltar que o indíviduo era apenas um combustível, portanto, igual ao gene e não fora usado o cruzamento por não haver o que cruzar, apenas seleção e mutação. Com isso, foram obtidos os seguintes resultados:
 
+<p align="center">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/Resultado01.png">
+</p>
 
+Como podemos observar, no primeiro uso do algoritmo, o último combustível obtido, portanto o melhor, tinha a mesma massa molar que o anterior e um valor de entalpia ligeiramente superior. Esse fato mostra que o algoritmo genético é capaz de passar pelos dados termodinâmicos e então obter uma resposta razoável para nosso problema, usando a abordagem explicada para a função objetivo.
+
+### Escolhendo dois bons combustíveis
+
+Continua...
+
+### Escolhendo uma mistura binária
+
+Continua...
 
 ---
 
