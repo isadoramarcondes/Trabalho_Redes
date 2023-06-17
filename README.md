@@ -124,17 +124,28 @@ Como podemos observar, no primeiro uso do algoritmo, o último combustível obti
 
 ### Escolhendo dois bons combustíveis
 
-Continua...
+Já a segunda versão do algoritmos nos entregava uma sequência de indivíduos, os quais eram formados por dois combustíveis, ou seja, eram misturas binárisa. Além disso, eles foram avaliados sobre os mesmos critérios, porém a necessidade de avaliar dois genes fez necessária a realização de uma combinação linear para termos um valor único de fitness e introduzimos o cruzamento, o qual trocava os combustíveis de duas misturas, o que aumentou ainda mais a nossa variabilidade. Assim, obtivemos esses resultados:
+
+<p align="center">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/Resultado02.png">
+</p>
+
+Aqui podemos ver que foi possível obter duas boas opções de combustível ao mesmo tempo, ou seja, conseguimos aplicar a avaliação para maximizar as características desejadas em ambos os genes da mistura, além de manter o comportamento anterior de obter uma melhora ao longo das gerações. Nesse sentido, vale destacar que os fatores de aleatoriedade não garantem uma melhora progressiva sempre e esse comportamento não é garantido, somente é maximizado com a otimização dos critérios, dos pesos e da construção geral do algoritmos.
 
 ### Escolhendo uma mistura binária
 
-Continua...
+Com os feitos da segunda versão, a terceira pôde finalmente buscar uma mistura binária ideal. Nesse contexto, mesmo que na situação anterior tivéssemos a estrutura de uma mistura sendo usada, não havia avaliação baseada nisso. Portanto, nessa versão, propusemos avaliações diferentes para nossos compostos, onde um deveria ter sua eficiência energética maximizada e o outro uma diferença de massa molar considerável para o primeiro pois sabemos que uma maior massa molar pode significar um maior ponto de ebulição, onde esses valores foram normalizados para facilitar a atribuição de pesos. Vale notar que essa abordagem foi adotada vista a falta de dados sobre o ponto de ebulição, volatilidade ou possíveis relações entre os potenciais termodinâmicos presentes em nossa tabela com essas grandezas. Assim, gostaríamos de ressaltar a necessidade de melhor explorar as ligações entre essas grandezas e os potenciais. Com isso, obtivemos os seguintes resultados:
 
----
+<p align="center">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/Resultado03.png">
+</p>
 
-```python
-# Exemplo de código Python
-def hello_world():
-    print("Hello, world!")
+Dessa vez, é factível a escolha de uma boa mistura binária usando os algoritmos genéticos, visto que conseguimos encontrar um par de compostos que atenderam aos critérios comentados e, portanto, possuem valores de eficiência e massa desejáveis. Além disso, é possível visualizar a estrutura dos compostos e seus nomes com o uso das bibliotecas rdkit e pubchempy, as quais podem ser usadas ao fim do algoritmo para uma melhor avaliação dos resultados. Dessa maneira, os compostos encontrados ao fim das gerações foram esses:
 
-hello_world()
+<p align="center">
+  <img src="https://github.com/isadoramarcondes/Trabalho_Redes/blob/main/Figuras%20Readme/Resultado04.png">
+</p>
+
+## Conclusão
+
+À luz dos argumentos supracitados, os objetivos foram alcançados, uma vez que foi possível escolher uma mistura binária razoável com os dados obtidos após o tratamento, os quais forma otimizados com uma normalização para melhorar e facilitar o uso do Método de Avaliação e tudo isso foi feito para fazer escolhas diferentes em momentos diferentes. Sendo assim, todos os objetivos apresentados foram alcançados e abrem as portas para diferentes formas de visualização de dados termodinâmicos massívos, já que a possibilidade de uso de critérios mais diversos e precisos do que os usados no presente trabalho permitem uma escolha mais refinada pelo algoritmo e, portanto, respostas mais completas para perguntas mais complexas.
